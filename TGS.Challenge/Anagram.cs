@@ -28,7 +28,7 @@ namespace TGS.Challenge
         public bool AreAnagrams(string word1, string word2)
         {
             if (word1.Length != word2.Length)
-            {
+            { 
                 return false;
             }
             //Convert string to character array  
@@ -46,6 +46,25 @@ namespace TGS.Challenge
                 }
             }
             return true;
+        }
+        static void Main(string[] args)
+        {
+            string word1, word2;  
+            Console.WriteLine("Please enter your first word");
+            word1 = Console.ReadLine();
+            Console.WriteLine("Enter second string");
+            word2 = Console.ReadLine();
+            Anagram anagram = new Anagram();
+            //Check 
+            if (anagram.AreAnagrams(word1, word2) == true)
+            {
+                Console.WriteLine("these are anagrams.");
+            }
+            else
+            {
+                Console.WriteLine("these are not anagrams.");
+            }
+            Console.ReadLine();
         }
     }
 }
