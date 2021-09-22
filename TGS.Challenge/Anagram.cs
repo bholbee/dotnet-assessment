@@ -1,3 +1,5 @@
+using System;
+
 namespace TGS.Challenge
 {
   /*
@@ -22,13 +24,28 @@ namespace TGS.Challenge
      */
     public class Anagram
     {
-      public bool AreAnagrams(string word1, string word2)
-      {
-            if(word1.Length != word2.Length)
+
+        public bool AreAnagrams(string word1, string word2)
+        {
+            if (word1.Length != word2.Length)
             {
                 return false;
             }
-        return false;
-      }
+            //Convert string to character array  
+            char[] wordOneArray = word1.ToLower().ToCharArray();
+            char[] wordTwoArray = word2.ToLower().ToCharArray();
+            //Sort array  
+            Array.Sort(wordOneArray);
+            Array.Sort(wordTwoArray);
+            //Check each character and position.  
+            for (int i = 0; i < wordOneArray.Length; i++)
+            {
+                if (wordOneArray[i].ToString() != wordTwoArray[i].ToString())
+                {
+                     return false;
+                }
+            }
+            return true;
+        }
     }
 }
