@@ -15,9 +15,27 @@ namespace TGS.Challenge
      */
     public class VowelCount
     {
-         public int Count(string value)
+        public static bool isVowel(char ch)
+        {
+            ch = char.ToUpper(ch);
+            return (ch == 'A' || ch == 'E' ||
+                    ch == 'I' || ch == 'O' ||
+                                  ch == 'U');
+        }
+        
+        public int Count(string value)
          {
-             return -1;
-         }
+            int count = 0;
+            for (int i = 0; i < value.Length; i++)
+            {
+
+                // Check for vowel
+                if (isVowel(value[i]))
+                {
+                    ++count;
+                }
+            }
+            return count;
+        }
     }
 }
