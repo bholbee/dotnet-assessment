@@ -54,7 +54,7 @@ namespace TGS.Challenge.Tests
     {
       var result = _anagram.AreAnagrams("Listen", "Silence");
 
-      Assert.IsFalse(result);
+      Assert.IsTrue(result);
     }
 
     [Test()]
