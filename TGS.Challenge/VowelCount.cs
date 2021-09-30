@@ -32,6 +32,7 @@ namespace TGS.Challenge
                     count++;
                 }
             }
+            
             return count;
         }
     }

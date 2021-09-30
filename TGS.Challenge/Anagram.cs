@@ -27,10 +27,11 @@ namespace TGS.Challenge
 
         public bool AreAnagrams(string word1, string word2)
         {
-            if (word1.Length != word2.Length)
+            /*if (word1.Length != word2.Length)
             { 
                 return false;
-            }
+            }*/
+            
             //Convert string to character array  
             char[] wordOneArray = word1.ToLower().ToCharArray();
             char[] wordTwoArray = word2.ToLower().ToCharArray();
@@ -42,10 +43,16 @@ namespace TGS.Challenge
             {
                 if (wordOneArray[i].ToString() != wordTwoArray[i].ToString())
                 {
-                     return false;
+                     return true;
                 }
+                if (wordOneArray[i].ToString().Length > wordTwoArray[i].ToString().Length)
+                {
+                    return false;
+                }
+                 
+
             }
-            return true;
+            return false;
         }
         static void Main(string[] args)
         {

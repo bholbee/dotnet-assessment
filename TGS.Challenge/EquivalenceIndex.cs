@@ -55,6 +55,7 @@ namespace TGS.Challenge
         }
       public int Find(int[] numbers)
         {
+            //int num = 0;
             int[] arr = { 36, 2, 17, 6, 6, 5 };
             int n = arr.Length;
      
