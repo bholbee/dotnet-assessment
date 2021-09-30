@@ -17,9 +17,46 @@ namespace TGS.Challenge
 
     public class EquivalenceIndex
     {
+        static void find_idx(int[] arr, int n)
+        {
+     
+        // List to store the indices
+        List<int> answer = new List<int>();
+     
+        // Initialise sum with 0
+        int sum = 0;
+     
+        // Starting from the last element
+        for (int i = n - 1; i >= 0; i--)
+        {
+     
+            // If sum till now is equal to
+            // the current element
+            if (sum == arr[i])
+            {
+                answer.Add(i);
+            }
+     
+            // Add current element to the sum
+            sum += arr[i];
+        }
+     
+        if (answer.Count == 0)
+        {
+            Console.WriteLine("-1");
+            return;
+        }
+     
+        for (int i = answer.Count - 1; i >= 0; i--)
+            Console.Write(answer[i] + " ");
+        }
       public int Find(int[] numbers)
-      {
-        return -99;
-      }
+        {
+            int[] arr = { 36, 2, 17, 6, 6, 5 };
+            int n = arr.Length;
+     
+            find_idx(arr, n);
+            return n;
+        }
     }
 }

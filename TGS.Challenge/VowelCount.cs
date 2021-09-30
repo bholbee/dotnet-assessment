@@ -23,12 +23,14 @@ namespace TGS.Challenge
 
         private int FindVowelsWithHelpArray(String inputString)
         {
-            abridged...
+            Console.WriteLine("abridged...");
         }
 
         private int FindVowelsWithRegex(String inputString)
         {
-            if (inputString == null) return 0;
+            if (inputString == null){
+                return 0;
+                }
             return Regex.Matches(inputString, "[aeiou]", RegexOptions.IgnoreCase).Count;
         }
     }
