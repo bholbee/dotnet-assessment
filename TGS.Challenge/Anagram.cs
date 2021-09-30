@@ -49,8 +49,6 @@ namespace TGS.Challenge
                 {
                     return false;
                 }
-                 
-
             }
             return false;
         }
