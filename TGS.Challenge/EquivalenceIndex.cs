@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace TGS.Challenge
 {
   /*
@@ -19,9 +22,9 @@ namespace TGS.Challenge
     {
         static void find_idx(int[] arr, int n)
         {
-     
-        // List to store the indices
-        List<int> answer = new List<int>();
+
+            // List to store the indices
+            List<int> answer = new List<int>();
      
         // Initialise sum with 0
         int sum = 0;

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bholbee\\dotnet-assessment",
+    "\\TGS.Challenge",
+    "\\TGS.Challenge.Tests"
   ],
-  "SelectedNode": "\\TGS.AlgoAssessment.sln",
+  "SelectedNode": "\\TGS.Challenge",
   "PreviewInSolutionExplorer": false
 }

@@ -15,22 +15,9 @@ namespace TGS.Challenge
      */
     public class VowelCount
     {
-        public int FindVowels(string input)
-        {
-            //return FindVowelsWithHelpArray(input);
-            return FindVowelsWithRegex(input);
-        }
-
-        private int FindVowelsWithHelpArray(String inputString)
-        {
-            Console.WriteLine("abridged...");
-        }
-
-        private int FindVowelsWithRegex(String inputString)
-        {
-            if (inputString == null){
-                return 0;
-                }
-            return Regex.Matches(inputString, "[aeiou]", RegexOptions.IgnoreCase).Count;
-        }
+         public int Count(string value)
+         {
+             return -1;
+         }
     }
+}
