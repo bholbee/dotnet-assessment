@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 namespace TGS.Challenge
 {
@@ -14,9 +15,20 @@ namespace TGS.Challenge
      */
     public class VowelCount
     {
-        public int Count(string value)
+        public int FindVowels(string input)
         {
-            return -1;
+            //return FindVowelsWithHelpArray(input);
+            return FindVowelsWithRegex(input);
+        }
+
+        private int FindVowelsWithHelpArray(String inputString)
+        {
+            abridged...
+        }
+
+        private int FindVowelsWithRegex(String inputString)
+        {
+            if (inputString == null) return 0;
+            return Regex.Matches(inputString, "[aeiou]", RegexOptions.IgnoreCase).Count;
         }
     }
-}
