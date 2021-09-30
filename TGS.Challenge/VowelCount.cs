@@ -17,22 +17,19 @@ namespace TGS.Challenge
     {
         public static bool isVowel(char ch)
         {
-            ch = char.ToUpper(ch);
-            return (ch == 'A' || ch == 'E' ||
-                    ch == 'I' || ch == 'O' ||
-                                  ch == 'U');
+            ch = char.ToLower(ch);
+            return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
         }
         
         public int Count(string value)
-         {
+        {
             int count = 0;
             for (int i = 0; i < value.Length; i++)
             {
-
-                // Check for vowel
+                // Checking vowel count
                 if (isVowel(value[i]))
                 {
-                    ++count;
+                    count++;
                 }
             }
             return count;
